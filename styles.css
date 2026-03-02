@@ -1,0 +1,186 @@
+
+.page {
+  font-family: 'Helvetica', sans-serif;
+  background: white;
+  color: black;
+}
+
+.page-section {
+  padding: 80px 0;
+  margin-bottom: 80px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-bottom: 36px;
+  margin-left: 60px;
+}
+
+.title {
+    font-size: clamp(28px, 5vw, 60px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0px;
+  max-width: 660px;
+  color: black;
+  margin-bottom: 70px;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: black;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover { 
+  background: #3a3b3d; 
+}
+
+.arrow:disabled { 
+  background: #ccc; cursor: default; 
+}
+
+.arrow svg {
+  width: 16px;
+  height: 16px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.outer {
+  overflow: hidden;
+}
+
+.inner {
+  padding: 0 50px;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.card {
+  flex: 0 0 21%;
+  min-width: 260px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.card:hover {
+  background: #fafafa;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.card-title {
+  font-family: "TWK Lausanne", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.card-desc {
+  font-family: "TWK Lausanne", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 72px;
+  letter-spacing: 0.32px;
+  line-height: 24px;
+  color: rgb(61, 61, 61);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 24px;
+   width: 75%;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.card-link:hover { 
+  text-decoration: none;
+  color: darkgray; 
+}
+
+.link-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-link:hover .link-icon { 
+  background: darkgray; 
+}
+
+.link-icon svg {
+  width: 12px;
+  height: 12px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  .header {
+    padding: 0 20px;
+    margin-left: 0;
+  }
+
+  .page-section {
+    padding: 40px 0;
+  }
+}
